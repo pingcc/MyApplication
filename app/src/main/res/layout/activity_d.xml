@@ -2,20 +2,77 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-              android:background="#d1d1d1"
-    android:orientation="vertical">
-<!--
-    <com.example.widget.CircleWaveImageView
-        android:id="@+id/circleWaveImageView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp" />-->
-    <EditText
-        android:id="@+id/et_edit"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"/>
+    android:background="#fafafa"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
     <com.example.widget.CircleView
         android:id="@+id/circleWaveImageView"
         android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格输入框:" />
+
+        <EditText
+            android:id="@+id/et_edit_price"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:hint="请输入商品价格(精确到两位小数点)"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数量输入框:" />
+
+        <EditText
+            android:id="@+id/et_edit_num"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:hint="请输入数量(最多4位数)"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数量输入框:" />
+
+            <EditText
+                android:id="@+id/et_edit_num1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:hint="请输入数量(可输入0，最多4位数)"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
 </LinearLayout>

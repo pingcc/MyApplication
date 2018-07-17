@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.user.myapplication">
+    package="com.example.user">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <application
@@ -15,26 +15,15 @@
 
         </activity>
 
-        <activity android:name=".AActivity" />
-        <activity android:name=".MoniActivity" />
-        <activity android:name=".MainActivity" />
-
-        <activity
-            android:name=".BActivity"
-            android:launchMode="singleTask" />
-        <activity android:name=".CActivity" />
-        <activity android:name=".DActivity" />
-        <activity
-            android:name=".EActivity"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".DActivity" />
     </application>
 
 </manifest>

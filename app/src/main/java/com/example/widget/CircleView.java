@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 
 import com.example.DisplayUtil;
-import com.example.user.myapplication.R;
+import com.example.user.R;
 
 /**
  * Created on 2017/6/30.
@@ -54,8 +54,6 @@ public class CircleView extends View {
         animator.setRepeatCount(ObjectAnimator.INFINITE);
         // 线性插值器 匀速旋转
         animator.setInterpolator(new LinearInterpolator());
-
-        start();
     }
 
     @Override

@@ -7,7 +7,7 @@ import android.os.Process;
 
 /**
  * Created on 2017/6/30.
- * author chen_ping
+ * @author chen_ping
  * Email yy_cping@163.com
  * Edit androidStudio
  */

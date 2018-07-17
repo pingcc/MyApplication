@@ -1,11 +1,9 @@
 android 小demo
 功能如下：
-1.小图合成大图
-2.自定义任何图片施加圆角，任意角单独施加圆角
-3.价格输入框edieText输入框过滤
-4.属性动画名字筛选框等众多工具
-5.使用方法切换A,B,C，D等activity显示界面
-（四小图合成大图施加圆角效果图）
+1.自定义进度条
+2.价格输入框edieText输入框过滤
+3.数量输入框(可输入0和不可输入0)过滤
+（效果图）
   ![image](https://github.com/pingcc/MyApplication/blob/master/screen.png?raw=true)
 
 

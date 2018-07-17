@@ -1,4 +1,4 @@
-package com.example.user.myapplication;
+package com.example.user;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.user.dailog.SelectDialog;
+import com.example.util.FastClickUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab;
     @BindView(R.id.textView)
     TextView textView;
-    private SelectDialog selectDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate()");
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        setSupportActionBar(toolbar);
         textView.setText("sdajhiasdiuh");
-//        selectDialog = new SelectDialog(this,true,true);
-        selectDialog = new SelectDialog(this,false,true);
 
     }
 
@@ -74,27 +70,18 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @OnClick({R.id.button1, R.id.button2, R.id.fab})
+    @OnClick({R.id.button1, R.id.fab})
     public void onViewClicked(View view) {
+        if (FastClickUtils.getInstance().isFastClick())
+            return;
         switch (view.getId()) {
             case R.id.button1:
-                startActivity(new Intent(getBaseContext(),CActivity.class));
+                startActivity(new Intent(getBaseContext(), DActivity.class));
                 break;
             case R.id.fab:
                 snakeText(view);
                 break;
-            case R.id.button2:
-                // 更新
-                selectDialog
-                        .setTitleText("有版本更新")
-                       .setShowTitle(true)
-                        .setRightBtnTextColor(R.color.color_white)
-                        .setRightBackgroundDrawable(R.drawable.selector_default_button_angle_8)
-                        .setSubtitleText("新版本更新，优化界面,\n修复一些不为人知的BUG。")
-                        .setRightClickListener(v -> {
-                        })
-                        .show();
-                break;
+
         }
     }
 
