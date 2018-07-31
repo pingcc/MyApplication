@@ -226,9 +226,9 @@ public class DesignModel {
             public void TestObserverModelRun() {
                 WatchServer server = new WatchServer();
 
-                ObserverModel.Observer userZhang = new User("ZhangSan");
-                ObserverModel.Observer userLi = new User("LiSi");
-                ObserverModel.Observer userWang = new User("WangWu");
+                Observer userZhang = new User("ZhangSan");
+                Observer userLi = new User("LiSi");
+                Observer userWang = new User("WangWu");
 
                 server.registerObserver(userZhang);
                 server.registerObserver(userLi);
