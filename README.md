@@ -8,3 +8,5 @@ android 小demo
 
 
 
+
+https://github.com/pingcc/ImageApplication/blob/master/images/screen.png?raw=true
